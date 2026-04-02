@@ -1,9 +1,8 @@
 let tasks = [];
-let currentId = 1;
 
 function createTask({ title, description, dueDate }) {
   return {
-    id: String(currentId++),
+    id: String(tasks.length + 1),
     title,
     description: description || null,
     createdAt: new Date(),

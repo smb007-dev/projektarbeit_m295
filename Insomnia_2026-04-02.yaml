@@ -1,0 +1,351 @@
+type: collection.insomnia.rest/5.0
+name: Projektarbeit
+meta:
+  id: wrk_177064d362144e0bac4c8d47c69d54ca
+  created: 1775111815916
+  modified: 1775111815916
+collection:
+  - url: http://localhost:3000/tasks
+    name: /tasks
+    meta:
+      id: req_810f17d63ae74064be276c682aa0cbcc
+      created: 1775111826328
+      modified: 1775132222070
+      isPrivate: false
+      sortKey: -1775111826328
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "Hausaufgaben",
+          "description": "Mathe lernen",
+          "dueDate": "2026-04-10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      disabled: false
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 201', () => {
+            insomnia.expect(insomnia.response.code).to.eql(201);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks
+    name: /tasks
+    meta:
+      id: req_bb584fa220a547d095981391b6879263
+      created: 1775112170433
+      modified: 1775132214207
+      isPrivate: false
+      sortKey: -1775112170433
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks/1/done
+    name: "/tasks/{id}/done\t"
+    meta:
+      id: req_ee22f2af482249e098b719895aa66904
+      created: 1775112212403
+      modified: 1775132236217
+      isPrivate: false
+      sortKey: -1775111826228
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 201', () => {
+            insomnia.expect(insomnia.response.code).to.eql(201);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks/1
+    name: /tasks/{id}
+    meta:
+      id: req_19c859aa510b42849ea9cb787c851c80
+      created: 1775112233726
+      modified: 1775132241686
+      isPrivate: false
+      sortKey: -1775111826128
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      disabled: false
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks/1
+    name: "\t/tasks/{id}"
+    meta:
+      id: req_07bace4fb6f347d0a3431eed90fb9fb2
+      created: 1775112245720
+      modified: 1775132247321
+      isPrivate: false
+      sortKey: -1775111826028
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "Home",
+          "description": "Mathe lernen",
+          "dueDate": "2026-04-10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks/1
+    name: /tasks/{id}
+    meta:
+      id: req_2a022edb931546eeb07ad3412727b11d
+      created: 1775112272354
+      modified: 1775132292363
+      isPrivate: false
+      sortKey: -1775111825928
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 204', () => {
+            insomnia.expect(insomnia.response.code).to.eql(204);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tasks
+    name: /tasks 2
+    meta:
+      id: req_c4d9dcdf17c64bd3bd89069329360a02
+      created: 1775112939634
+      modified: 1775132230315
+      isPrivate: false
+      sortKey: -1775111826278
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "Dog",
+          "description": "Walk the dog",
+          "dueDate": "2026-04-10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 201', () => {
+            insomnia.expect(insomnia.response.code).to.eql(201);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/login
+    name: /login
+    meta:
+      id: req_fcb8bf0f75d9446cad4aa61bc507578c
+      created: 1775113325786
+      modified: 1775132178466
+      isPrivate: false
+      sortKey: -1775113325786
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "admin",
+          "password": "1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: none
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/verify
+    name: /verify
+    meta:
+      id: req_fbab9b3514694c5f93b72b07fdf15c5b
+      created: 1775130639250
+      modified: 1775132191903
+      isPrivate: false
+      sortKey: -1775112748109.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/logout
+    name: /logout
+    meta:
+      id: req_e26cf01d65914f6f96a04d1ab0811e6a
+      created: 1775130664926
+      modified: 1775132202732
+      isPrivate: false
+      sortKey: -1775112459271.25
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_54216d1c49bf38145893ae8d0be886daf8da4b1e
+    created: 1775111815923
+    modified: 1775111815923
+environments:
+  name: Base Environment
+  meta:
+    id: env_54216d1c49bf38145893ae8d0be886daf8da4b1e
+    created: 1775111815920
+    modified: 1775111815920
+    isPrivate: false
