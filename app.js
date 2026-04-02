@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const PORT = 3000
 app.use(express.json());
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app.use("/swagger-ui", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 let tasks = [];
 let currentId = 1;
