@@ -19,7 +19,6 @@ Dieses Projekt ist eine REST-API zur Verwaltung von Aufgaben (Tasks), implementi
 
 ```bash
 git clone <repository-url>
-cd task-api
 ```
 
 2. Abhängigkeiten installieren
@@ -66,7 +65,7 @@ POST /login
 }
 ```
 
-👉 Antwort:
+Antwort:
 
 ```json
 {
